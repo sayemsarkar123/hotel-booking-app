@@ -7,6 +7,6 @@ export default configureStore({
   devTools: true,
   middleware: (getDefaultMiddleware) =>
     process.env.NODE_ENV === 'development'
-      ? getDefaultMiddleware({ serializableCheck: false }).concat(logger)
+      ? getDefaultMiddleware({ immutableCheck: false }).concat(logger)
       : getDefaultMiddleware(),
 });
